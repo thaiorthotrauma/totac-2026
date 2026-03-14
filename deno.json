@@ -1,0 +1,21 @@
+{
+  "imports": {
+    "@line/bot-sdk": "npm:@line/bot-sdk@^10.6.0",
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@^2.99.1",
+    "axios": "npm:axios@^1.13.6",
+    "express": "npm:express@^5.2.1",
+    "fuse.js": "npm:fuse.js@^7.1.0",
+    "randomcolor": "npm:randomcolor@^0.6.2"
+  },
+  "scripts": {
+    "start": "deno index.js"
+  },
+  "deploy": {
+    "org": "thaiorthotrauma",
+    "app": "totac-2026"
+  },
+  "tasks": {
+    "dev": "deno run --allow-net --watch index.js",
+    "tunnel": "deno run --tunnel -A index.js"
+  }
+}

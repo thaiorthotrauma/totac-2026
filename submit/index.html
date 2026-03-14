@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LEAVE LETTER</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <style>
+        #body {
+            display: none;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="h-screen flex flex-col justify-center items-center bg-[#eef2ff]">
+        <div class="animate__animated animate__pulse animate__infinite infinite animate__slower">
+            <img class="" src="./tots.png">
+        </div>
+        <div class="mt-12 text-xl text-[#062D95] font-semibold">หนังสือเชิญประชุมถูกจัดส่งแล้ว</div>
+        <div class="mt-4 text-lg text-[#062D95]">กรุณาตรวจสอบอีเมลของท่าน</div>
+    </div>
+
+    <script>
+        const body = document.getElementById("body")
+        if (window.innerWidth < 481) {
+            body.style.display = "block"
+        }
+    </script>
+</body>
+
+</html>
