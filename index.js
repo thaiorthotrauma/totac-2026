@@ -35,14 +35,10 @@ app.use("/letter/activate", express.static("letter"))
 app.use("/submit", express.static("submit"))
 app.use("/agenda", express.static("agenda"))
 app.use("/src", express.static("src"))
-app.use("/pacourse/signin", express.static("pacourse/signin"))
-app.use("/pacourse/auth", express.static("pacourse/auth"))
-app.use("/pacourse/complete", express.static("pacourse/complete"))
-app.use("/pacourse/video", express.static("pacourse/video"))
 
 app.get("/letter/init", (_, res) => {
     form().then((id) => {
-        res.redirect("https://dolphin-app-a5itu.ondigitalocean.app/letter/activate?id=" + id)
+        res.redirect("https://totac-2026.thaiorthotrauma.deno.net/letter/activate?id=" + id)
     }).catch((error) => {
         console.error(error)
         res.sendStatus(500)
@@ -149,7 +145,7 @@ const handleEvent = async (event) => {
                             "contents": [
                                 {
                                     "type": "image",
-                                    "url": "https://dolphin-app-a5itu.ondigitalocean.app/src/search.png",
+                                    "url": "https://totac-2026.thaiorthotrauma.deno.net/src/search.png",
                                     "size": "full",
                                     "aspectMode": "fit",
                                     "aspectRatio": "1:1",
@@ -1098,7 +1094,7 @@ const createForm = async () => {
                 redirectOnCompletion: {
                     safeHTMLSchema: [
                         [
-                            "https://dolphin-app-a5itu.ondigitalocean.app/submit"
+                            "https://totac-2026.thaiorthotrauma.deno.net/submit"
                         ]
                     ],
                     mentions: []
@@ -1419,7 +1415,7 @@ const addWebhook = async (id) => {
     try {
         await axios.post("https://api.tally.so/webhooks", {
             formId: id,
-            url: "https://dolphin-app-a5itu.ondigitalocean.app/callback?id=" + id,
+            url: "https://totac-2026.thaiorthotrauma.deno.net/callback?id=" + id,
             eventTypes: ["FORM_RESPONSE"]
         })
     } catch (error) {
