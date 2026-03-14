@@ -30,7 +30,7 @@ const agenda_room = ["Room A", "Room B", "Room C", "Room D"]
 app.listen(port, () => {
     console.log("TOTS server is running")
 })
-
+//static express
 app.use("/letter/activate", express.static("letter"))
 app.use("/submit", express.static("submit"))
 app.use("/agenda", express.static("agenda"))
